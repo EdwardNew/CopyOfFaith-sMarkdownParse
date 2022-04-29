@@ -1,11 +1,11 @@
 import static org.junit.Assert.*;
-import org.junit.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
+
+import org.junit.*;
 
 public class MarkdownParseTest {
     @Test
@@ -92,6 +92,11 @@ public class MarkdownParseTest {
         Path filepath = Path.of("test-file8.md");
         String mdFile = Files.readString(filepath);
         assertEquals(List.of("a link on the first line"), MarkdownParse.getLinks(mdFile));
+    }
+
+    @Test
+    public void workflowTest() {
+        assertEquals(1, 2);
     }
 
 }
